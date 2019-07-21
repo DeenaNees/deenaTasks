@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="5" name="pytest" skips="0" tests="5" time="77.474">
+    <testcase classname="pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_data_integrity.test_spira_data_integrity" file="nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py" line="17" name="test_data_integrity[nic_pair0-60-10-4-start_stress0-file_size_megabytes_list0-mtu_list0]" time="13.44127607345581">
+        <failure message="Exception: No IPv4 address for eth1">nala/nala/modules/server/networkinterface.py:264: in get_ip
+    results = ip_addr.searchString(res)[0][0]
+/home/rcatz/.pyenv/versions/3.6.1/lib/python3.6/site-packages/pyparsing.py:423: in __getitem__
+    return self.__toklist[i]
+E   IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py:64: in test_data_integrity
+    interval=interval, transmit_time=transmit_time)
+nala/nala/modules/server/networkinterface.py:709: in start_iperf3_client
+    interface = f&quot;{self.get_ip_v6()}%{self.name}&quot; if ip_v6 else self.get_ip()
+nala/nala/modules/server/networkinterface.py:271: in get_ip
+    raise Exception(msg)
+E   Exception: No IPv4 address for eth1
+        </failure>
+    </testcase>
+
+    <testcase classname="pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_data_integrity.test_spira_data_integrity" file="nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py" line="17" name="test_data_integrity[nic_pair1-60-10-4-start_stress0-file_size_megabytes_list0-mtu_list0]" time="13.215770483016968">
+        <failure message="Exception: No IPv4 address for eth2">nala/nala/modules/server/networkinterface.py:264: in get_ip
+    results = ip_addr.searchString(res)[0][0]
+/home/rcatz/.pyenv/versions/3.6.1/lib/python3.6/site-packages/pyparsing.py:423: in __getitem__
+    return self.__toklist[i]
+E   IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py:64: in test_data_integrity
+    interval=interval, transmit_time=transmit_time)
+nala/nala/modules/server/networkinterface.py:709: in start_iperf3_client
+    interface = f&quot;{self.get_ip_v6()}%{self.name}&quot; if ip_v6 else self.get_ip()
+nala/nala/modules/server/networkinterface.py:271: in get_ip
+    raise Exception(msg)
+E   Exception: No IPv4 address for eth2
+        </failure>
+    </testcase>
+    <testcase classname="pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_dhcp.test_spira_dhcp" file="nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py" line="8" name="test_spira_dhcp[nic_pair0-start_stress0]" time="10.634706974029541">
+        <failure message="nala.modules.server.server.FailCmdException: &lt;class &apos;nala.modules.server.server.FailCmdException&apos;&gt;:
+Cmd:sudo -E sh -c &quot;sudo dhclient&quot;
+Return code: 1
+Stdout:
+Stderr:">nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py:37: in test_spira_dhcp
+    nic.server.exec_cmd(&quot;sudo dhclient&quot;)
+nala/nala/modules/server/server.py:915: in exec_cmd
+    parsed_output=result.parsed_output)
+E   nala.modules.server.server.FailCmdException: &lt;class &apos;nala.modules.server.server.FailCmdException&apos;&gt;:
+E   Cmd:sudo -E sh -c &quot;sudo dhclient&quot;
+E   Return code: 1
+E   Stdout:
+E   Stderr:
+        </failure>
+    </testcase>
+    <testcase classname="pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_dhcp.test_spira_dhcp" file="nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py" line="8" name="test_spira_dhcp[nic_pair1-start_stress0]" time="10.627718925476074">
+        <failure message="nala.modules.server.server.FailCmdException: &lt;class &apos;nala.modules.server.server.FailCmdException&apos;&gt;:
+Cmd:sudo -E sh -c &quot;sudo dhclient&quot;
+Return code: 1
+Stdout:
+Stderr:">nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py:37: in test_spira_dhcp
+    nic.server.exec_cmd(&quot;sudo dhclient&quot;)
+nala/nala/modules/server/server.py:915: in exec_cmd
+    parsed_output=result.parsed_output)
+E   nala.modules.server.server.FailCmdException: &lt;class &apos;nala.modules.server.server.FailCmdException&apos;&gt;:
+E   Cmd:sudo -E sh -c &quot;sudo dhclient&quot;
+E   Return code: 1
+E   Stdout:
+E   Stderr:
+        </failure>
+    </testcase>
+    <testcase classname="pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_driver_reload.test_spira_driver_reload" file="nala_tests/tests/ena/spira_driver_reload/test_spira_driver_reload.py" line="8" name="test_driver_reload[100]" time="28.698421001434326">
+        <failure message="RuntimeError: cannot schedule new futures after shutdown">nala_tests/tests/ena/spira_driver_reload/test_spira_driver_reload.py:44: in test_driver_reload
+    pool.submit(pair[0].get_state, show_cmd_output=True)
+nala/nala/modules/utils/nala_threadpool.py:46: in submit
+    job = super().submit(exception_wrapper(fn), *args, **kwargs)
+/home/rcatz/.pyenv/versions/3.6.1/lib/python3.6/concurrent/futures/thread.py:109: in submit
+    raise RuntimeError(&apos;cannot schedule new futures after shutdown&apos;)
+E   RuntimeError: cannot schedule new futures after shutdown
+        </failure>
+    </testcase>
+</testsuite>

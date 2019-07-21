@@ -1,0 +1,11 @@
+Test Case Name,file,class name,time,status,failure msg
+test_data_integrity[nic_pair0-60-10-4-start_stress0-file_size_megabytes_list0-mtu_list0],nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py,pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_data_integrity.test_spira_data_integrity,13.44127607345581,faild,"Exception: No IPv4 address for eth1
+nala/nala/modules/server/networkinterface.py:264: in get_ip"
+test_data_integrity[nic_pair1-60-10-4-start_stress0-file_size_megabytes_list0-mtu_list0],nala_tests/tests/ena/spira_data_integrity/test_spira_data_integrity.py,pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_data_integrity.test_spira_data_integrity,13.215770483016968,faild,"Exception: No IPv4 address for eth2
+nala/nala/modules/server/networkinterface.py:264: in get_ip"
+test_spira_dhcp[nic_pair0-start_stress0],nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py,pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_dhcp.test_spira_dhcp,10.634706974029541,faild,"nala.modules.server.server.FailCmdException: <class 'nala.modules.server.server.FailCmdException'>: Cmd:sudo -E sh -c ""sudo dhclient"" Return code: 1 Stdout: Stderr:
+nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py:37: in test_spira_dhcp"
+test_spira_dhcp[nic_pair1-start_stress0],nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py,pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_dhcp.test_spira_dhcp,10.627718925476074,faild,"nala.modules.server.server.FailCmdException: <class 'nala.modules.server.server.FailCmdException'>: Cmd:sudo -E sh -c ""sudo dhclient"" Return code: 1 Stdout: Stderr:
+nala_tests/tests/ena/spira_dhcp/test_spira_dhcp.py:37: in test_spira_dhcp"
+test_driver_reload[100],nala_tests/tests/ena/spira_driver_reload/test_spira_driver_reload.py,pair4.ec2-user@ec2-3-90-168-75.compute-1.amazonaws.com.nala_tests.tests.ena.spira_driver_reload.test_spira_driver_reload,28.698421001434326,faild,"RuntimeError: cannot schedule new futures after shutdown
+nala_tests/tests/ena/spira_driver_reload/test_spira_driver_reload.py:44: in test_driver_reload"
